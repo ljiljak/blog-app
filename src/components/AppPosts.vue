@@ -1,11 +1,11 @@
 <template>
-	<div>
-		<ul>
-		 	<li v-for="(post, key) in posts" :key="post.id"> 
-		 	{{post.title}} - {{ post.text }} </li>
-		 	
-        </ul>
 
+	<div class="col-md-8 blog-main">
+		<div class="blog-post" v-for="post in posts" :key="post.id">
+    		<h2 class="blog-post-title">{{ post.title }}</h2>
+    		<p class="card-text">{{ post.text }}</p>
+    		<router-link class="nav-link" to="/post/${id}">View Post</router-link>
+		</div>
 	</div>
 
 </template>
